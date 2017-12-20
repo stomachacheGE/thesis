@@ -1,12 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 
-% Rahmenumgebung für Studien Diplomarbeiten
+% Rahmenumgebung fï¿½r Studien Diplomarbeiten
 % Erstellt von Oomke Weikert und Florian Keiler
-% Änderungen im file _changelog.txt
+% ï¿½nderungen im file _changelog.txt
 
 % Titel und Autor der Arbeit unten im 
-% \hypersetup Kommando ändern
-% ...und natürlich auf der Titelseite (title.tex bzw. title_en.tex)
+% \hypersetup Kommando ï¿½ndern
+% ...und natï¿½rlich auf der Titelseite (title.tex bzw. title_en.tex)
 
 % um pdf-file zu erzeugen:
 % compilieren mit:
@@ -15,15 +15,15 @@
 % pdflatex  
 % pdflatex 
 % (Hinweis: Das pdf-file darf bei Aufruf von pdflatex
-% nicht im Adobe Reader geöffnet sein. Wenn man das
-% pdf-file mit Ghostview öffnet, muss es nicht geschlossen
+% nicht im Adobe Reader geï¿½ffnet sein. Wenn man das
+% pdf-file mit Ghostview ï¿½ffnet, muss es nicht geschlossen
 % werden, und man kann dort die gerade bearbeitete Seite
 % offen lassen)
 
-% Im figures Ordner müssen die Bilder z.B. in pdf oder jpg Format liegen,
-% mit pdflatex können *keine* eps Bilder benutzt werden.
+% Im figures Ordner mï¿½ssen die Bilder z.B. in pdf oder jpg Format liegen,
+% mit pdflatex kï¿½nnen *keine* eps Bilder benutzt werden.
 % Das pdf file darf beim Kompilieren nicht 
-% im Acrobat Reader geöffnet sein!!!
+% im Acrobat Reader geï¿½ffnet sein!!!
 
 % um ps-file zu erzeugen:
 % compilieren mit:
@@ -33,7 +33,7 @@
 % latex 
 % dvips
 
-% dvips Aufruf für Type-1 Schriften: 
+% dvips Aufruf fï¿½r Type-1 Schriften: 
 % dvips -t a4 -Ppdf 
 % (alte GhostScript-Version: dvips -t a4 -Ppdf -G0) 
 % Umwandeln in pdf mit Acrobat Distiller 
@@ -61,8 +61,9 @@
 
 \usepackage[margin=1cm,format=hang,font=small,labelfont=bf,textfont=sl]{caption}
 % angepasste Bildunterschriften
-% Doku siehe beigefügtes pdf-file
+% Doku siehe beigefï¿½gtes pdf-file
 
+% subfig is here
 \usepackage{subfig}
 
 \usepackage[english]{babel}
@@ -77,15 +78,15 @@
 %\usepackage{times} 
   % Saves a lot of ouptut space in PDF...
   % ..after conversion with ps2pdf or Adobe Distiller	 
-	% ändert aber die Schriftart! (Times statt computer modern roman)
-\usepackage{courier} % fett *und* typewriter nur damit möglich?
-% ändert normale Schrift nicht!
+	% ï¿½ndert aber die Schriftart! (Times statt computer modern roman)
+\usepackage{courier} % fett *und* typewriter nur damit mï¿½glich?
+% ï¿½ndert normale Schrift nicht!
 
 \usepackage{cite}
 % Automatisches Zusammenfassen von Literaturstellen
 
 \usepackage{fancyheadings}	
-%STY-file fancyheadings.sty nicht standardmäßig in miktex enthalten
+%STY-file fancyheadings.sty nicht standardmï¿½ï¿½ig in miktex enthalten
 %evtl. durch fancyhdr ersetzen
 
 \usepackage{float}
@@ -109,13 +110,13 @@
 %\usepackage{rotating}
 
 \usepackage{array}
-% wird benutzt von macro.tex für \Case
+% wird benutzt von macro.tex fï¿½r \Case
 
 \usepackage{ifthen}
 % wird benutzt von macro.tex \ifthenelse
 
 \usepackage{longtable}
-% für lange Tabellen größer als eine Seite mit \begin{longtable} .. \end{longtable}
+% fï¿½r lange Tabellen grï¿½ï¿½er als eine Seite mit \begin{longtable} .. \end{longtable}
 
 \usepackage{varioref}
 % Kommando \vref verweist mit Seitenzahl
@@ -129,6 +130,8 @@
 \usepackage{colortbl}
 \usepackage{color}
 \usepackage{xcolor} 
+%\usepackage{caption} %added by fu
+
 
 \usepackage{listings}
 
@@ -143,17 +146,17 @@
 
 %\usepackage{subcaption}
 %\lstset{}% restore default
-%# title={Titel}:  gibt einen Titel zur Umgebung an (erscheint über dem Code zentriert)
+%# title={Titel}:  gibt einen Titel zur Umgebung an (erscheint ï¿½ber dem Code zentriert)
 %# caption={Titel}:  
 %# label=Name:
 
 \lstset{
 				frame=lines, %Umrandung (single|none|shadowbox|lines|bottomline|topline|leftline)
 				framerule=1pt, %Rahmenbreite
-				tabsize=4, %Anzahl der Zeichen für ein TAB
+				tabsize=4, %Anzahl der Zeichen fï¿½r ein TAB
 				backgroundcolor=\color{lightgray}, %Hintergrundfarbe
-				emph={}, %hebt die angegebenen Wörter hervor
-				emphstyle=\underbar, %unterstreicht hervorgehobene Wörter
+				emph={}, %hebt die angegebenen Wï¿½rter hervor
+				emphstyle=\underbar, %unterstreicht hervorgehobene Wï¿½rter
 				columns=fixed, %Zeichenabstand (fixed | flexible | fullflexible)
 				lineskip=0pt, %Zeilenabstand
 				basicstyle=\ttfamily,%\ttfamily,
@@ -189,7 +192,7 @@
 %\usepackage{fancybox}
 %\usepackage{theorem}
 %\usepackage{amsbsy}
-%\usepackage{nomencl}        % unterstützt Symbolverzeichnisse
+%\usepackage{nomencl}        % unterstï¿½tzt Symbolverzeichnisse
 %\usepackage{makeidx}
 %\usepackage{multind}
 
@@ -218,16 +221,20 @@ axis/.style={<->},
 \usepackage{amssymb} %added by fu
 \usepackage{textcomp} %added by fu
 
-\usepackage{array} %added by fu
+%\usepackage{array} %added by fu
 \usepackage{natbib}
 \usepackage{setspace} %added by fu
-\usepackage{tabu}
+%\usepackage{tabu}
 \usepackage{tabularx}
-\usepackage{multirow} %added by fu
+%\usepackage{multirow} %added by fu
+%\usepackage{graphicx}
+%\usepackage{subcaption} %added by fu
 \usepackage{mathtools}
-\usepackage{wrapfig}
+%\usepackage{wrapfig}
 \usepackage{longtable}
-\usepackage{tabu}
+\DeclareMathOperator*{\argmax}{arg\,max}
+% small math characters
+\newcommand{\sml}[1]{\mbox{\scriptsize $#1$}}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \usetikzlibrary{pgfplots.groupplots}
@@ -243,8 +250,16 @@ axis/.style={<->},
   \vspace{-5pt} \\#1 \vspace{5pt}} %added by fu
   											   % for new lines in table cell
 
-\usepackage{enumitem} %for better itemize
+%\usepackage{enumitem} %for better itemize
 %\setlist{itemsep=8pt}
+
+%
+% this makes list spacing much better.
+%
+\newenvironment{my_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}}{\end{enumerate}
+}
 
 \usepackage{ifpdf}
 %\newif\ifpdf  
@@ -268,13 +283,13 @@ axis/.style={<->},
 	%pagebackref, %link from references back to page of citation
 	linktocpage, 
 	% im Inhaltsverzeichnis Link auf Seitenzahl (sonst Probleme bei langen Zeilen)
-	%breaklinks = true, % für Links länger als 1 Zeile
-	%hypertexnames = false,  % für Links zu Figures?
+	%breaklinks = true, % fï¿½r Links lï¿½nger als 1 Zeile
+	%hypertexnames = false,  % fï¿½r Links zu Figures?
 	bookmarksopen, %open all bookmark folders
 	bookmarksnumbered, %use section numbers with bookmarks
     pdfpagemode=UseOutlines, %show bookmarks
 	% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=pdfpagelabels
-	plainpages=false, % eigene Seitenanker für römische/arabische Seitenzahlen
+	plainpages=false, % eigene Seitenanker fï¿½r rï¿½mische/arabische Seitenzahlen
 	pdfpagelabels, % im Abode Reader Seitenzahl als z.B. "iii (3 von 20)" anzeigen
 %	pdfstartview=FitH
 	pdfstartview=FitV
@@ -306,7 +321,7 @@ axis/.style={<->},
 	% nor any other window present. The default setting is /UseNone.
 	} %end of \pdfcatalog
 \else % compiling with latex
-  \usepackage[dvips]{graphicx}
+ \usepackage[dvips]{graphicx}
 %  \usepackage{color}
   \DeclareGraphicsExtensions{.eps}
   \usepackage[
@@ -317,8 +332,8 @@ axis/.style={<->},
 %  	colorlinks=true,
 	linktocpage, 	
 	% im Inhaltsverzeichnis Link auf Seitenzahl (sonst Probleme bei langen Zeilen)
-	%breaklinks = true, % für Links länger als 1 Zeile
-	% funktioniert *nicht* korrekt für lange Zeilen mit gs < 7.05.3 ?
+	%breaklinks = true, % fï¿½r Links lï¿½nger als 1 Zeile
+	% funktioniert *nicht* korrekt fï¿½r lange Zeilen mit gs < 7.05.3 ?
 %	pdfstartview=FitH, % funktionfor different stakeholders of prostate cancer, e.g., patients, doctors and pharmaceutical companies.iert NICHT mit Adobe Distiller
 	bookmarksopen, %open all bookmark folders
 	bookmarksnumbered, %use section numbers with bookmarks
@@ -345,7 +360,7 @@ axis/.style={<->},
 \input{macros.tex}
 
 % make ',' an ordinary Symbol in decimal numbers
-% Unterdrückung des Zwischenraums hinter einem Komma (z.B. in Dezimalzahlen)
+% Unterdrï¿½ckung des Zwischenraums hinter einem Komma (z.B. in Dezimalzahlen)
 % Steht im Mathemodus hinter dem Komma ein Leerzeichen, wird es als Trennzeichen
 % (mit Zwischenraum) benutzt, sonst als Dezimalkomma.
  \mathchardef\CommaOrdinary="013B
@@ -377,7 +392,7 @@ axis/.style={<->},
 % so werden Probleme bei hyperlinks vermieden
 
 \include{title_en}
-\thispagestyle{empty} % Titelrückseite (S. 2) ohne Seitennummer
+\thispagestyle{empty} % Titelrï¿½ckseite (S. 2) ohne Seitennummer
 
 \cleardoublepage
 
@@ -399,8 +414,8 @@ axis/.style={<->},
 \include{toc}
 \cleardoublepage
 
-% Hier wird das Symbolzeichnis eingefügt
-% Falls es nicht gewünscht ist, sind die folgenden sechs Zeilen auszukommentieren
+% Hier wird das Symbolzeichnis eingefï¿½gt
+% Falls es nicht gewï¿½nscht ist, sind die folgenden sechs Zeilen auszukommentieren
 % \cleardoublepage % to get correct page no. in TOC
 % \phantomsection
 % \markboth{\bfseries LIST OF SYMBOLS}{\bfseries LIST OF SYMBOLS}
@@ -433,7 +448,7 @@ axis/.style={<->},
 \include{chap6}
 
 \cleardoublepage
-%\include{chap7}
+\include{chap7}
 %############# appendix #################
 \cleardoublepage
 \renewcommand{\chaptername}{\appendixname} %if name appears in header

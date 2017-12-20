@@ -1,0 +1,81 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Summary of Results}{13}{chapter.7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Occupancy predictions for BOFUM and our proposed BOFMP after several time steps. The map shows a T-section. At $t=0$, a person is shown as a red rectangle and with initial velocity towards left. At $t=15$, the person encounters intersection. BOFUM has no information about human motion pattern, and continues to propagate occupancy towards left. Our BOFMP knows that humans are likely to turn to either upper or lower corridors. At $t=30$, since occupancies going left vanish due to the wall, BOFUM predicts occupancies in corridors, but they are biased towards walls on the left. Our BOFMP predicts more occupancies in the middle of corridors, since it knows humans are more likely to walk in the middle.}}{14}{figure.7.1}}
+\newlabel{fig:idea}{{7.1}{14}{Summary of Results}{figure.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1} Neural Network Training}{14}{section.7.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Cross entropy loss for trainning networks. We trained networks to learn conditional probabilities \( P_c\{V | V^-\} \). The green line shows trainning dynamics using data generated with directions "left, right, up and down". The yellow line also takes diagonal directions into account, which has 8 directions in total. Naturally, since more directions implies higher complexity, the overall loss for yellow line is higher than green line.}}{15}{figure.7.2}}
+\newlabel{fig:trainning}{{7.2}{15}{Neural Network Training}{figure.7.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Human Trajectory Simulation}{15}{section.7.2}}
+\newlabel{section:hms}{{7.2}{15}{Human Trajectory Simulation}{section.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces \textbf  {Left}: One example map crop as netwrok input. The map has size of \( 32 \times 32 \) cells, with resolution of \( 0.2m/cell\). It also shows trajectories that goes through the red cell. \textbf  {Right}: Visualization of conditional probability \( P\{V | V^-\} \) for the red cell on left map. The axis shows velocities on \( x, y\) directions. Outter axes represent last velocity \( V^- \), and inner represent next velocity \( V \). One can see that \( P\{V=(-1, -1) | V^-=(-1, -1)\} = 0.21 \) and \( P\{V=(0, -1) | V^-=(-1, -1)\} = 0.79 \). This indicates that if a person reaches the red cell from upper right, it is very likely he will go downwards. }}{16}{figure.7.3}}
+\newlabel{fig:trajs}{{7.3}{16}{Human Trajectory Simulation}{figure.7.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Object Tracking using Bayesian Occupancy Filter}{17}{section.7.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces One filtering step of BOFMP filter. At last time step, the tracking object goes from up to down. Based on motion pattern, BOFMP predicts that there are possibilities that this object will trun to left-down and keep going downwards. After measurement shows that this obejct still goes downwards, BOFMP corrects its predictions and attenuates probabilities of turning left-down. Since the measurement adds additional information for BOFMP to make better predictions, the average precision increases after correction step.}}{17}{figure.7.4}}
+\newlabel{fig:correction}{{7.4}{17}{Object Tracking using Bayesian Occupancy Filter}{figure.7.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}Comparision between BOFUM and BOFMP}{17}{section.7.4}}
+\newlabel{table:param_range}{{7.4}{18}{Comparision between BOFUM and BOFMP}{Item.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Parameter ranges for BOF filters.}}{18}{table.7.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}On simulated data}{19}{subsection.7.4.1}}
+\newlabel{table:best_param_simulated}{{7.4.1}{19}{On simulated data}{subsection.7.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.2}{\ignorespaces Best parameters for BOFUM and BOFMP on simulated data.}}{19}{table.7.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Evaluation results on test data. The average precision for both filters start with values close to zero. Since we highly trust our measurments (low $\Omega $), both filters are able to successfully track the objects within 3 time steps. The fact that average precision keeps a high vaule from $t=3$ to $t=8$ indicates that both filters can predict very well for the next immediate time step. Starting from $t=9$ (see the red dash line), measurements are no longer given. The prediction is still accurate for the next time step ($t=9$), but decreases progressively over time. This is expected, since without measurements, the state of world becomes more and more uncertain. Even though, we can see that our BOFMP have a higher average precision value than BOFUM at almost every time step, which indicates the improvements of our method in both tracking and future predicition stages.}}{19}{figure.7.5}}
+\newlabel{fig:simulated_test_data}{{7.5}{19}{On simulated data}{figure.7.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces One example of tracking case from test data.}}{20}{figure.7.6}}
+\newlabel{fig:tracking_simulated_data}{{7.6}{20}{On simulated data}{figure.7.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}On real data}{20}{subsection.7.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces A turn on simulated human trajectory. In order to reach the goal location in upper left corner, the simulated trajectory shows that a person will make a turn from going up to going up-left at location indicated by the red square. However, in real scenarios, a person is more flexible in deciding where to make that turn and he might turn at any location in the green area.}}{21}{figure.7.7}}
+\newlabel{fig:blur_idea}{{7.7}{21}{On real data}{figure.7.7}{}}
+\newlabel{table:spatial_blur_param_range}{{7.4.2}{22}{On real data}{figure.7.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.3}{\ignorespaces Parameters introduced by spatial blurring and their value ranges.}}{22}{table.7.3}}
+\newlabel{table:motion_keeping_param_range}{{7.4.2}{23}{On real data}{equation.7.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.4}{\ignorespaces Parameters introduced by motion keeping and their value ranges.}}{23}{table.7.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces \textbf  {Up}: Three tracking steps of BOFMP with motion keeping. A person is walking from upper left towards lower right. The measurement is lost at $t=9$. \textbf  {Down}: Velocities of the cell pointed by the red arrow at $t=8$. On each plot, the most possible direction is shown by the green arrows. Based on measurements from $t=7$ and $t=8$, the predicted velocity $P\{V_{pred}\}$ shows it is more likely the occupancy will propagates towards right for the next time step. However, past motion trend, which is represented by $P\{V_{ma}\}$, shows it is more likely to move to lower right. As a consequnce, BOFMP with motion keeping shows there are possibilities going both right and lower right, which is more realistic in this tracking example.}}{23}{figure.7.8}}
+\newlabel{fig:keep_motion_idea}{{7.8}{23}{On real data}{figure.7.8}{}}
+\newlabel{table:best_param_real}{{7.4.2}{24}{On real data}{figure.7.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.5}{\ignorespaces Best parameters for BOFUM and BOFMP on real data.}}{24}{table.7.5}}
+\newlabel{table:real_test_data}{{7.4.2}{24}{On real data}{table.7.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.6}{\ignorespaces Future predictions for BOFUM and BOFMP on real data.}}{24}{table.7.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces Evaluation results on real test data. Like for simulated data, average precision starts with values close to zero, and increase rapidly over the next two time steps. From $t=3$ to $t=8$, average precisions keep rather stable at high values, which proves that filters predict very well for the next immediate step. In future prediction stage ($t=9:16$), average precisions decrease severely as time horizon increases, since the state of the world becomes more uncertain. However, our BOFMP and its variations are still better than BOFUM for every time step in this stage.}}{24}{figure.7.9}}
+\newlabel{fig:real_test_data}{{7.9}{24}{On real data}{figure.7.9}{}}
+\@setckpt{chap7}{
+\setcounter{page}{26}
+\setcounter{equation}{2}
+\setcounter{enumi}{3}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{7}
+\setcounter{section}{4}
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{9}
+\setcounter{table}{6}
+\setcounter{KVtest}{0}
+\setcounter{subfigure}{0}
+\setcounter{subfigure@save}{2}
+\setcounter{lofdepth}{2}
+\setcounter{subtable}{0}
+\setcounter{subtable@save}{0}
+\setcounter{lotdepth}{1}
+\setcounter{float@type}{8}
+\setcounter{parentequation}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{vrcnt}{0}
+\setcounter{lstnumber}{1}
+\setcounter{NAT@ctr}{0}
+\setcounter{Item}{12}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{39}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{2}
+\setcounter{pageno}{2}
+}

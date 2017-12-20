@@ -29,3 +29,10 @@
 \contentsline {chapter}{\numberline {6}Outlooks}{11}{chapter.6}
 \contentsline {section}{\numberline {6.1}End to End Training}{11}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future Work}{11}{section.6.2}
+\contentsline {chapter}{\numberline {7}Summary of Results}{13}{chapter.7}
+\contentsline {section}{\numberline {7.1} Neural Network Training}{14}{section.7.1}
+\contentsline {section}{\numberline {7.2}Human Trajectory Simulation}{15}{section.7.2}
+\contentsline {section}{\numberline {7.3}Object Tracking using Bayesian Occupancy Filter}{17}{section.7.3}
+\contentsline {section}{\numberline {7.4}Comparision between BOFUM and BOFMP}{17}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}On simulated data}{19}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}On real data}{20}{subsection.7.4.2}
